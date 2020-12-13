@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">    <!--깃허브 외국페이지 이기때문에 en 유지-->
+<head>
+    <meta charset="UTF-8">
+    <title>GitHub</title>
+    <meta name="author" content="SANGHOON">     <!--제작자-->
+    <meta name="description" content="rltgjqm ">    <!--내용설명-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalate">  <!--사용하는 디바이스의 가로넓이를 그대로 사용 / 댜양한 디바이스의 초기 배율(첫 화면 축소,확대x = 1) /  사용자가 화면을 확대, 축소 하는 기능을 사용x -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!--익스플로러8버전 이상의 렌더링 호환-->
+    
+    <!-- http://ogp.me/ -->
+<meta property="og:type" content="website">     <!--정보를 외부에 제공할껀데 타입은 웹사이트-->
+<meta property="og:site_name" content="GitHub"> <!--이름은 깃헙-->
+<meta property="og:title" content="Build software better, together">    <!--제목은 빌드 소프트웨어 투게더-->
+<meta property="og:description" content="GitHub clone coding / GitHub is where people build software. More than 31 million people use GitHub to discover, fork, and contribute to over 100 million projects.">      <!--설명-->
+<meta property="og:image" content="img/logo__github.png">   <!--로고에 이미지-->
+<meta property="og:url" content="https://github.com">   <!--이미지 파일의 url 주소-->
+
+<!-- https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started.html -->
+<meta property="twitter:card" content="summary">    <!--트위터의 카드형태로 제공하는데 개요이다-->
+<meta property="twitter:site" content="GitHub">     <!--사이트 이름은 깃헙-->
+<meta property="twitter:title" content="Build software better, together">   <!--제목은 빌드 소프트웨어 투게더-->
+<meta property="twitter:description" content="GitHub clone coding / GitHub is where people build software. More than 31 million people use GitHub to discover, fork, and contribute to over 100 million projects.">     <!--설명-->
+<meta property="twitter:image" content="img/logo__github.png">  <!--대표 이미지-->
+<meta property="twitter:url" content="https://github.com">  <!-- 사이트의 url 주소-->
+
+
+<!--사이트를 대표하는 이미지(favicon)-->
+<link rel="icon" href="./favicon.png">
+<link rel="apple-touch-icon" href="./favicon.png">  <!--스마트폰에서 사용되는 아이콘-->
+<!--<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico"> -->
+
+<!--google pont 적용-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.csss">  <!--main.css 보다 먼저 호출되어야함 ***cdn에서 가져와서 사용-->
+<link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+  <div class="body__container"> <!--body 대신에 사용할 태그 *** 언더바 2개 사용한것은 BEM작명규칙-->
+                                <!-- '-' 일반적인 작명 / '__' ~의 일부분 / '--' ~의 상태-->
+    <!--HEADER-->
+    <header class="section">
+        <div class="inner clearfix">
+            <div class="menu-group float--left">
+                <div class="logo">
+                    <a href="#">GitHub</a>
+                </div>
+                <ul class="main-menu">
+                    <li><a href="#">Personal</a></li>
+                    <li><a href="#">Open source</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Explore</a></li>
+                </ul>
+            </div>
+            <div class="sign-group float--right">
+                <div class="btn-group">
+                    <a href="#" class="btn sign-in">Sign in</a>
+                    <a href="#" class="btn btn--primary sign-up">Sign up</a>
+                </div>
+                <form id="search-form" method="POST" action="">
+                    <input type="text" id="search"  class="input--text" placeholder="Search GithHub">
+                    <input type="submit" value="submit">
+                </form>
+                <ul class="sub-menu">
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!--VISUAL-->
+    <section class="section section--visual">
+        <div class="inner">
+
+            <div class="summary">
+                <div class="summarry__title">
+                    How people build software
+                </div>
+                <div class="summary__description">
+                    Millions of developers use GitHub to build personal projects, support their businesses, and work together on open source technologies.
+                </div>
+            </div>
+
+            <form id="sign-form" method="POST" action="">                
+            </form>
+
+        </div>
+
+    </section>
+
+</div>
+</html>
