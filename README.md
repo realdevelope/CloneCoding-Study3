@@ -7,6 +7,6 @@
 1. HTML 실무 구조✔ 
 2. CSS 실무 요소✔ -grid, flex
 3. 웹표준, 웹접근성, 웹호환성✔<br>
-4. JS google map api 연동
+4. JS google map api 연동✔
 
 ## 직접 비교 해보세요
