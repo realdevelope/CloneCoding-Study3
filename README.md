@@ -1,1 +1,12 @@
-# CloneCoding-Study3
+# 실전테스트 
+#벨로퍼트 - GitHub Clone (40%완성)<br>
+#12월 한달 프론트앤드 기초부터 바로잡기 프로젝트3.5/31
+
+## 학습내용
+
+1. HTML 실무 구조✔ 
+2. CSS 실무 요소✔ -grid, flex
+3. 웹표준, 웹접근성, 웹호환성✔<br>
+4. JS google map api 연동
+
+## 직접 비교 해보세요
