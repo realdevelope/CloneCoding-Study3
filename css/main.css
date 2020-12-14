@@ -116,7 +116,7 @@ a{
 
 /*SECTION & INNER*/
 .section{
-
+    position: relative; /*자기자신으로 위치를 설정 (레이아웃에는 아무영향x)*/
 }
 
 .section .inner{
@@ -170,7 +170,7 @@ header .main-menu li{
 
 header .main-menu li a{
     display: block;
-    padding: 10px;
+    padding: 5px;
     color:  #3c4146;
 }
 
@@ -227,15 +227,33 @@ header .sub-menu li a:hover{
     color: #4078c0;
 }
 
+
 /*VISUAL*/
 .section--visual{
     background-image: url(../img/bg.jpg);
     background-repeat: no-repeat; /*반복x*/
     background-position: bottom left;
+    background-size: cover; /*축소 확대해도 이미지가 전체를 잡아먹음*/
+}
+
+.section--visual::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.3);
 }
 
 .section--visual .inner{
     padding: 160px 0;
+    display: flex;
+}
+
+.section--visual .summary{
+    flex: 1;
+    margin-right: 90px;
 }
 
 .section--visual .summary__title{
@@ -246,5 +264,180 @@ header .sub-menu li a:hover{
 }
 
 .section--visual .summary__description{
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.25),
+                 0 1px 25px rgba(0,0,0,0.75);
+}
 
+#sign-form{
+    width: 340px;
+}
+
+#sign-form li{
+    margin-bottom: 17px;
+    list-style-type: none;  /*resset.css 안되서.. 추가3*/
+}
+
+#sign-form li:last-child{
+    margin-bottom: 0;
+}
+
+#sign-form .input--text{
+    width: 100%;
+    height: 40%;
+}
+
+#sign-form .caption{
+    font-size: 12px;
+    margin-top: 5px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.5;
+    text-align: center;
+}
+
+#sign-form [type="submit"]{
+    width: 100%;
+    height: 62px;
+    padding: 0 25px;
+    font-size: 20px;
+    justify-content: center; /*text-align: center; 가 안될떄 수평정렬*/
+}
+
+
+/*FEATURE*/
+.section--feature{
+    background:  #f5f5f5;
+    padding-top: 66px;
+}
+
+.section--feature .summary{
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section--feature .video{
+    max-width: 650px;
+    margin: 50px auto 0 auto;
+}
+
+.section--feature .video .video-ratio{
+    height: 0;
+    padding-top: 56.25%;
+    position: relative;
+}
+
+.section--feature .video .video-ratio iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.section--feature .tiles{
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;;
+}
+
+.section--feature .tiles .inner{
+    max-width: 1200px;  /*공통 inner에서 정의된 max-width 값을 1200으로 덮어버림*/
+}
+
+.section--feature .tiles ul{
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr);  4개의 컬럼, 1:1:1:1의 비율로 그리드 생성 */
+}
+
+.section--feature .tiles li{
+    padding: 34px 24px;
+    text-align: center;
+    line-height: 1.5;
+    border-right: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    float: left;    /*부모요소에 clearfix 있는지 확인해야됨*/
+    width: 25%;
+    list-style-type: none;  /*resset.css 안되서.. 추가4*/
+}
+
+.section--feature .tiles li:last-child(){
+    border-right: none;
+}
+
+.section--feature .tiles li h3{
+    font-size: 18px;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+.section--feature .tiles li p{
+    font-size: 14px;
+    color: #767676;
+}
+
+.section--feature .tiles ul li{
+
+}
+
+.section--feature .tiles ul li img{
+    max-width: 100%;
+    padding : 14px 10% 24px;
+}
+
+
+/*WHERE IS*/
+.section--where-is{
+
+}
+
+.section--where-is .inner{
+    padding-top: 80px;
+}
+
+#map{
+    width: 100%;
+    height: 400px;
+    margin-top: 40px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-bottom: none;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    box-sizing: border-box;
+}
+
+
+/*PRICING CARD*/
+.section-pricing{
+    background: linear-gradient(#f5f5f5, #fff); /*그라데이션 쓰긴쓰는구나...*/
+}
+
+.section-pricing .inner{
+    padding: 80px 0;
+}
+
+.section-pricing .card{
+    display: flex;
+    border: 1px solid #e5e5e5;
+    border-radius : 6px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.section-pricing .card .cell{
+   padding: 24px;
+   display: flex;
+   justify-content:center;
+   align-items: center;
+}
+
+.section-pricing .card .cell1{
+    height: 50px;
+    font-size: 16px;
+}
+
+.section-pricing .card .cell2{
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.5;
+    flex : 1;   /*베이시스 1로 설정시 0이 됨 그래서 생략*/
+    border-left: 1px solid #e5e5e5;
 }
